@@ -4,7 +4,7 @@ import com.najdev.task.domain.entity.TaskPriority;
 
 import java.time.LocalDate;
 
-public record CreateTaskRequest(
+public record  CreateTaskRequest(
         String title,
         String description,
         LocalDate dueDate,
