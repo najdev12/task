@@ -21,8 +21,15 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public Task createTask(CreateTaskRequest request) {
         Instant now = Instant.now();
-        Task task = new Task(null, request.title(), request.description(), request.dueDate(), TaskStatus.OPEN,
-                request.priority(), now, now);
+        Task task = new Task(
+                null,
+                request.title(),
+                request.description(),
+                request.dueDate(),
+                TaskStatus.OPEN,
+                request.priority(),
+                now,
+                now);
         return taskRepository.save(task);
     }
 }
