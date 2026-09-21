@@ -5,10 +5,11 @@ import com.najdev.task.domain.entity.TaskStatus;
 
 import java.time.LocalDate;
 
-public class UpdateTaskRequest {
-    private String title;
-    private String description;
-    LocalDate dueDate;
-    TaskStatus status;
-    TaskPriority priority;
+public record UpdateTaskRequest(
+        String title,
+        String description,
+        LocalDate dueDate,
+        TaskStatus status,
+        TaskPriority priority
+) {
 }
